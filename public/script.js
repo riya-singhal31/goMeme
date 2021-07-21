@@ -4,12 +4,12 @@ var MemeList = document.getElementById("MemeList");
 var pic = document.getElementById("files");
 var data, meme, file; //it will store array
 
-//initially, getting all the saved tasks on reloading
+//initially, getting all the saved memes on reloading
 getDataFromServer();
 
 btn.addEventListener("click", addMeme);
 
-//function to execute on pressing done: add task to list
+//function to execute on pressing done: add memes to list
 function addMeme(){
     getDataFromServer();
 }
@@ -29,11 +29,11 @@ function getDataFromServer(){
 }
 
 var i=2;
-//function to display tasks
+//function to display memes
 function addMemesToDom(memes){
    clear(MemeList);
    memes.forEach(currMeme=>{
-      	//creating div for new task
+      	//creating div for new meme
   var item = document.createElement("div");
 	//item.style.width = "200px";
 	//item.style.height = "50px";
@@ -47,7 +47,7 @@ function addMemesToDom(memes){
   item.id = currMeme.id
 
 
-  //adding description about task
+  //adding description about meme
 	var tname = document.createElement("label");
 	tname.innerHTML = currMeme.name;
 	tname.style.marginRight = "50px";

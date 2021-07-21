@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 
 
 
-//get request to read the tasks stored
+//get request to read the memes stored
 app.get("/getData", (req, res)=>{
     fs.readFile("./data.txt", 'utf-8', function(error, fileData){
         if(error)
